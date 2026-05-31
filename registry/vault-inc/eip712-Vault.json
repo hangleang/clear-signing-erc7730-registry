@@ -1,0 +1,76 @@
+{
+  "$schema": "https://eips.ethereum.org/assets/eip-7730/erc7730-v2.schema.json",
+  "context": {
+    "$id": "Vault",
+    "eip712": {
+      "domain": {
+        "name": "Vault",
+        "version": "1",
+        "chainId": 31337,
+        "verifyingContract": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      },
+      "deployments": [
+        {
+          "chainId": 31337,
+          "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Vault Inc.",
+    "info": {
+      "url": "https://vault.example"
+    }
+  },
+  "display": {
+    "formats": {
+      "WithdrawalPermit(address owner,address to,uint256 amount,uint256 nonce,uint256 deadline)": {
+        "intent": "Permit vault withdrawal",
+        "fields": [
+          {
+            "path": "owner",
+            "label": "Owner",
+            "format": "addressName",
+            "params": {
+              "types": [
+                "wallet",
+                "eoa"
+              ]
+            }
+          },
+          {
+            "path": "to",
+            "label": "Recipient",
+            "format": "addressName",
+            "params": {
+              "types": [
+                "wallet",
+                "eoa",
+                "contract"
+              ]
+            }
+          },
+          {
+            "path": "amount",
+            "label": "Amount",
+            "format": "amount"
+          },
+          {
+            "path": "nonce",
+            "label": "Nonce",
+            "format": "raw"
+          },
+          {
+            "path": "deadline",
+            "label": "Expires",
+            "format": "date",
+            "params": {
+              "encoding": "timestamp"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
