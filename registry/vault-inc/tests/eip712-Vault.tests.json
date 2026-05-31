@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../specs/erc7730-tests.schema.json",
+  "tests": [
+    {
+      "description": "Permit vault withdrawal",
+      "data": {
+        "types": {
+          "EIP712Domain": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "version",
+              "type": "string"
+            },
+            {
+              "name": "chainId",
+              "type": "uint256"
+            },
+            {
+              "name": "verifyingContract",
+              "type": "address"
+            }
+          ],
+          "WithdrawalPermit": [
+            {
+              "type": "address",
+              "name": "owner"
+            },
+            {
+              "type": "address",
+              "name": "to"
+            },
+            {
+              "type": "uint256",
+              "name": "amount"
+            },
+            {
+              "type": "uint256",
+              "name": "nonce"
+            },
+            {
+              "type": "uint256",
+              "name": "deadline"
+            }
+          ]
+        },
+        "primaryType": "WithdrawalPermit",
+        "domain": {
+          "name": "Vault",
+          "version": "1",
+          "chainId": 31337,
+          "verifyingContract": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+        },
+        "message": {
+          "owner": "0x000000000000000000000000000000000000dEaD",
+          "to": "0x000000000000000000000000000000000000dEaD",
+          "amount": "1000000000000000000",
+          "nonce": "1000000000000000000",
+          "deadline": "1000000000000000000"
+        }
+      }
+    }
+  ]
+}

@@ -237,7 +237,7 @@
   "display": {
     "formats": {
       "deposit()": {
-        "intent": "Deposit ETH to vault",
+        "intent": "Deposit ETH to Vault",
         "fields": [
           {
             "path": "@.value",
@@ -247,11 +247,11 @@
         ]
       },
       "withdraw(address to, uint256 amount)": {
-        "intent": "Withdraw ETH from vault",
+        "intent": "Withdraw ETH",
         "fields": [
           {
             "path": "to",
-            "label": "Recipient",
+            "label": "To",
             "format": "addressName",
             "params": {
               "types": [
@@ -269,7 +269,7 @@
         ]
       },
       "withdrawWithPermit(address owner, address to, uint256 amount, uint256 deadline, uint8 v, bytes32 r, bytes32 s)": {
-        "intent": "Permit withdraw from vault",
+        "intent": "Withdraw with Permit",
         "fields": [
           {
             "path": "owner",
@@ -284,7 +284,7 @@
           },
           {
             "path": "to",
-            "label": "Recipient",
+            "label": "To",
             "format": "addressName",
             "params": {
               "types": [
@@ -301,7 +301,7 @@
           },
           {
             "path": "deadline",
-            "label": "Expires",
+            "label": "Valid Until",
             "format": "date",
             "params": {
               "encoding": "timestamp"

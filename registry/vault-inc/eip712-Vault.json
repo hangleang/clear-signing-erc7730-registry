@@ -26,7 +26,7 @@
   "display": {
     "formats": {
       "WithdrawalPermit(address owner,address to,uint256 amount,uint256 nonce,uint256 deadline)": {
-        "intent": "Permit Withdrawal",
+        "intent": "Permit vault withdrawal",
         "fields": [
           {
             "path": "owner",
@@ -35,8 +35,7 @@
             "params": {
               "types": [
                 "wallet",
-                "eoa",
-                "contract"
+                "eoa"
               ]
             }
           },
